@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo de Luann Pereira Mendes</title>
     <style>
-        body {
+          body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -15,6 +15,19 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        /* Modo claro (padrão) */
+        body.light-mode {
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        /* Modo escuro */
+        body.dark-mode {
+            background-color: #333;
+            color: #ffffff;
         }
 
         .container {
@@ -22,14 +35,99 @@
             width: 100%;
             padding: 20px;
             box-sizing: border-box;
-            background-color: #f7f7f7;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilos para o modo escuro */
+        body.dark-mode .container {
+            background-color: #222;
         }
 
         header {
             text-align: center;
             padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .contact-info {
+            background-color: #1E90FF;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Estilos para o modo escuro */
+        body.dark-mode .contact-info {
+            background-color: #333;
+        }
+
+        .contact-image {
+            max-width: 100px;
+            border-radius: 50%;
+        }
+
+        .section {
+            margin-top: 20px;
+        }
+
+        .section-heading {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* Estilos para o modo escuro */
+        body.dark-mode .section-heading {
+            color: #fff;
+        }
+
+        .section p {
+            margin: 10px 0;
+        }
+
+        /* Estilos para o modo escuro */
+        body.dark-mode .section p {
+            color: #ccc;
+        }
+
+        .section ul {
+            padding-left: 20px;
+        }
+
+        /* Estilos para o modo escuro */
+        body.dark-mode .section ul {
+            color: #ccc;
+        }
+
+        .section h3 {
+            margin: 0;
+        }
+
+        /* Estilizar links */
+        a {
+            color: #1E90FF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos para o modo escuro */
+        body.dark-mode a {
+            color: #4BB543;
+        }
+
+        /* Estilos para o modo escuro */
+        body.dark-mode a:hover {
+            text-decoration: underline;
         }
 
         h1 {
@@ -84,10 +182,18 @@
         }
     </style>
 </head>
-<body>
+            <script>
+                function toggleDarkMode() {
+                    const body = document.body;
+                    body.classList.toggle('dark-mode');
+                }
+            </script>
     <div class="container">
-        <header>
-            <h1>Luann Pereira Mendes</h1>
+
+            <header>
+                <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+                <h1>Luann Pereira Mendes</h1>
             <div class="contact-info">
                 <img class="contact-image" src="https://media.licdn.com/dms/image/D4D35AQFERdKAXWKaJQ/profile-framedphoto-shrink_200_200/0/1696199038205?e=1697572800&v=beta&t=6DDHu-Ax47c22aerVoxrXKaCgOGXF87DKfJ7hCZBib4;" alt="Profile Image">
                 <div>
